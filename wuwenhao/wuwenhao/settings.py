@@ -43,11 +43,11 @@ INSTALLED_APPS = [
     'forms',
     'xadmin',
     'crispy_forms',
-    'corsheaders',  # 跨域访问
+    # 'corsheaders',  # 跨域访问
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # 跨域访问
+    # 'corsheaders.middleware.CorsMiddleware',  # 跨域访问
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,4 +129,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/forms'),
 )
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
