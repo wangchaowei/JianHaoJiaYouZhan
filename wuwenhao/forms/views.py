@@ -6,4 +6,4 @@ from django.views.generic.base import View
 class TableView(View):
 
     def get(self, request):
-        return
+        return render(request, 'index.html')

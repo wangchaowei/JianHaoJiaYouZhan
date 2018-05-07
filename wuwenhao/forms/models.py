@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 class Table(models.Model):
-    order_number = models.CharField(max_length=50, verbose_name=u'订单号', default='')
+    order_number = models.CharField(max_length=50, verbose_name=u'订单号', default='', )
     user_name = models.CharField(max_length=50, verbose_name=u'联系人', default='')
     tel = models.CharField(max_length=50, verbose_name=u'电话', default='')
     add = models.CharField(max_length=50, verbose_name=u'地址', default='')
