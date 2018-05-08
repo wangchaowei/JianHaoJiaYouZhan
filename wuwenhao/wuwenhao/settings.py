@@ -16,6 +16,7 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
@@ -34,7 +35,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,14 +43,14 @@ INSTALLED_APPS = [
     'forms',
     'xadmin',
     'crispy_forms',
-    # 'corsheaders',  # 跨域访问
+    'corsheaders',  # 跨域访问
 ]
 
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',  # 跨域访问
+    'corsheaders.middleware.CorsMiddleware',  # 跨域访问
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -129,4 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/forms'),
 )
-# CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_ALLOW_ALL = True
