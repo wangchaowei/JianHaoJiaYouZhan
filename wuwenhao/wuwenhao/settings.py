@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'forms',
     'xadmin',
+    'DjangoUeditor',
     'crispy_forms',
     'corsheaders',  # 跨域访问
 ]
